@@ -1,0 +1,12 @@
+{
+  "name": "raja-slot-web18-v61",
+  "version": "0.61.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "check": "node --check server/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

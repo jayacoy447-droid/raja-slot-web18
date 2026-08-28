@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: raja-slot-web18
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: RAJA_ADMIN_TOKEN
+        generateValue: true

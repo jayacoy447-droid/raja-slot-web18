@@ -1,0 +1,23 @@
+RAJA SLOT WEB18 V61 — PUBLIC TEST DEPLOYMENT
+
+Tujuan tahap ini: mendapatkan URL HTTPS untuk UJI PUBLIK, bukan rilis produksi.
+
+Opsi platform:
+- Render: gunakan render.yaml
+- Railway / platform Docker: gunakan Dockerfile + railway.json
+- VPS/Cloud Run/Fly.io: dapat menggunakan Dockerfile
+
+Sebelum deploy:
+1. Pastikan RAJA_ADMIN_TOKEN disimpan sebagai secret environment.
+2. Gunakan HTTPS.
+3. Ganti data/store.json dengan database persisten sebelum produksi.
+4. Backup dan monitoring wajib untuk produksi.
+5. Uji daftar/login/sync/ledger dari dua perangkat berbeda.
+6. Pastikan koin virtual tidak dapat ditarik/cash-out.
+
+Sesudah mendapatkan URL:
+- Buka URL dari HP.
+- Tekan Cek Server.
+- Buat akun server.
+- Login dari perangkat kedua.
+- Uji saldo dan ledger.
