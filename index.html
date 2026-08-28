@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RAJA SLOT WEB18 V61 Public Test Gate</title>
+<style>
+:root{--bg:#07111f;--panel:#111d31;--panel2:#192743;--gold:#f3c64f;--text:#f7f8fb;--muted:#9eabc0;--purple:#7d34c4}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+body{min-height:100vh;padding-bottom:86px}.wrap{max-width:760px;margin:auto}.page{display:none;min-height:100vh}.page.active{display:block}
+.top{position:sticky;top:0;z-index:20;background:#0b1628eF;backdrop-filter:blur(8px);padding:14px 16px;border-bottom:1px solid #243550}
+.brand{display:flex;justify-content:space-between;align-items:center;gap:10px}.brand h1{margin:0;font-size:1.25rem;color:var(--gold)}
+.coin{background:#1d2940;border:1px solid #3d4e6b;border-radius:999px;padding:8px 12px;font-weight:800}
+.hero{margin:14px 16px;padding:18px;border-radius:24px;background:linear-gradient(135deg,#55257f,#23173f);border:1px solid #7652a5}
+.hero h2{margin:0 0 8px;color:#ffd65c}.hero p{margin:0;color:#e3d9ef}
+.daily{margin:14px 16px;padding:14px;border-radius:18px;background:#70243a;border:1px solid #a34a65;display:flex;justify-content:space-between;align-items:center}
+.btn{border:0;border-radius:14px;padding:12px 16px;font-weight:900;font-size:.95rem;background:var(--gold);color:#222;touch-action:manipulation}
+.btn.secondary{background:#1b2a46;color:#fff;border:1px solid #3b4d6e}.btn:disabled{opacity:.45}
+.tabs{display:flex;gap:8px;overflow:auto;padding:0 16px 10px}.tab{white-space:nowrap;border-radius:999px;padding:10px 14px;background:#172640;color:#fff;border:1px solid #314563;font-weight:800}.tab.active{background:var(--purple);border-color:#b174eb}
+.search{margin:0 16px 16px;width:calc(100% - 32px);padding:14px;border-radius:16px;border:1px solid #354660;background:#0d1728;color:#fff;font-size:1rem}
+.section-title{display:flex;justify-content:space-between;align-items:end;padding:8px 16px}.section-title h3{margin:0;font-size:1.1rem}.section-title span{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0 16px 18px}.card{position:relative;min-height:150px;padding:15px;border-radius:22px;background:linear-gradient(145deg,#251a38,#121a2c);border:1px solid #493c68;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;touch-action:manipulation}.card:active{transform:scale(.985)}
+.card .emoji{position:absolute;right:18px;top:30px;font-size:3.6rem}.card h4{margin:0 0 6px;font-size:1.02rem}.card small{color:#aeb8cc}.play{margin-top:12px;color:#ffe189;font-weight:900}
+.game-head{padding:14px 16px;display:flex;gap:10px;align-items:center}.game-head h2{margin:0;flex:1}.back{background:#1b2941;color:#fff;border:1px solid #344764;border-radius:12px;padding:10px 13px;font-weight:900}
+.reels{margin:10px 16px;background:#0c1524;border:2px solid #6f5832;border-radius:22px;padding:12px;display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.cell{aspect-ratio:1/1;display:grid;place-items:center;border-radius:13px;background:#f6ead0;color:#222;font-size:2rem;border:1px solid #bca770}
+.cell.win{outline:3px solid #ffd441;box-shadow:0 0 16px #ffd44199}
+.controls{padding:8px 16px;display:grid;gap:10px}.row{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+.status{padding:10px 16px;text-align:center;color:#f5d57a;min-height:42px;font-weight:800}.mini{font-size:.8rem;color:var(--muted);text-align:center}
+.tablefelt{margin:12px 16px;padding:18px;min-height:260px;border-radius:28px;background:radial-gradient(circle,#1e6b59,#123c35);border:4px solid #8a6437;display:flex;flex-direction:column;justify-content:space-between}
+.chain,.hand{display:flex;gap:6px;overflow:auto;min-height:62px;align-items:center}.tile{flex:0 0 auto;padding:10px 8px;border-radius:10px;background:#f6f1df;color:#222;border:1px solid #aaa;font-weight:900;min-width:48px;text-align:center}.tile.playable{outline:3px solid #ffd24f}
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 16px}.stat{background:#141f32;border:1px solid #34455f;border-radius:16px;padding:12px;text-align:center}.stat small{display:block;color:#9da9ba}.stat b{font-size:1.25rem}
+.cardarea{padding:12px 16px;display:flex;gap:8px;flex-wrap:wrap}.playingcard{background:#fff;color:#111;padding:11px 9px;border-radius:10px;min-width:48px;text-align:center;font-weight:900}
+.dicebox{font-size:4rem;text-align:center;padding:30px}.board{margin:12px 16px;display:grid;grid-template-columns:repeat(6,1fr);gap:4px}.sq{aspect-ratio:1/1;border-radius:8px;background:#17253d;display:grid;place-items:center;font-size:.9rem}.sq.p{background:#4d2c72}.sq.b{background:#254d72}
+.puzzle{margin:12px 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.pz{aspect-ratio:1/1;border-radius:12px;border:0;background:#273a5c;color:#fff;font-size:1.25rem;font-weight:900}.pz.blank{background:#0b1422}
+.gems{margin:12px 16px;display:grid;grid-template-columns:repeat(6,1fr);gap:4px}.gem{aspect-ratio:1/1;border:0;border-radius:8px;background:#182a45;font-size:1.4rem}.gem.sel{outline:3px solid #ffd34c}
+.wheel{width:240px;height:240px;border-radius:50%;margin:18px auto;background:conic-gradient(#c94 0 45deg,#7254c9 45deg 90deg,#3b9 90deg 135deg,#c55 135deg 180deg,#d8b43c 180deg 225deg,#4d72c9 225deg 270deg,#8d5 270deg 315deg,#a45 315deg 360deg);border:10px solid #1b2a44;display:grid;place-items:center;font-weight:900;font-size:1.2rem;transition:transform 1.4s cubic-bezier(.1,.7,.1,1)}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#0c1729;border-top:1px solid #2c3c56;display:flex;justify-content:space-around;padding:10px 4px calc(10px + env(safe-area-inset-bottom));z-index:30}.nav{background:none;border:0;color:#c6cfdd;font-weight:800;font-size:.82rem}.nav b{display:block;font-size:1.45rem}.nav.active{color:#fff}
+.disclaimer{padding:24px 16px 10px;text-align:center;color:#a4afc0;font-size:.82rem}
+@media(max-width:390px){.grid{gap:9px}.card{min-height:140px}.cell{font-size:1.65rem}}
+
+.cell.spinfx{animation:reelPulse .22s linear infinite alternate}
+@keyframes reelPulse{from{transform:translateY(-2px);filter:blur(.2px)}to{transform:translateY(2px)}}
+
+
+.status{border-radius:12px;background:#0b1627;border:1px solid #233653;margin:8px 16px}
+
+
+button{min-height:44px}.card{min-height:156px}
+
+
+.hero{box-shadow:0 12px 36px rgba(50,18,90,.25)}
+.card{box-shadow:0 8px 20px rgba(0,0,0,.15)}
+
+
+.tile.playable{box-shadow:0 0 0 3px #ffd24f,0 0 14px rgba(255,210,79,.35)}
+
+.brand h1{text-shadow:0 0 20px rgba(243,198,79,.2)}.hero{background:linear-gradient(135deg,#622f91,#251741 62%,#151b35)}.card:hover{border-color:#715b91}.play{letter-spacing:.04em}
+.page:not(.active){content-visibility:hidden}.card,.cell{will-change:transform}
+
+html{-webkit-text-size-adjust:100%}body{overscroll-behavior-y:contain}
+button,.card{-webkit-tap-highlight-color:transparent}
+@media(max-width:340px){.grid{grid-template-columns:1fr}.reels{gap:4px;padding:8px}.cell{font-size:1.45rem}}
+
+
+.age-gate,.modalx{
+ position:fixed;inset:0;background:rgba(3,7,16,.92);display:none;align-items:center;justify-content:center;
+ padding:20px;z-index:99999;backdrop-filter:blur(8px)
+}
+.age-gate.show,.modalx.show{display:flex}
+.age-card,.modalx-card{
+ width:min(420px,94vw);background:linear-gradient(180deg,#17233a,#0d1628);
+ border:1px solid #475777;border-radius:22px;padding:22px;box-shadow:0 24px 80px rgba(0,0,0,.45)
+}
+.age-card{text-align:center}.age-crown{font-size:3rem}.age-card h2,.modalx-card h3{margin:6px 0 10px}
+.modalx-card{position:relative}.modalx-close{position:absolute;right:12px;top:10px;background:transparent;border:0;color:#fff;font-size:1.2rem}
+.fieldx{width:100%;box-sizing:border-box;margin:6px 0 12px;padding:12px;border-radius:12px;border:1px solid #40516e;background:#0a1322;color:#fff}
+.coinpacks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.coinpack,.qbtn{border:1px solid #495c7a;background:#14223a;color:#fff;border-radius:14px;padding:12px;font-weight:800}
+.quickbar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 16px 14px}
+.mutedx{color:#aeb9ca;font-size:.85rem}
+@media(max-width:390px){.quickbar{grid-template-columns:1fr}.coinpacks{grid-template-columns:1fr}}
+
+
+.quickbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:700px){.quickbar{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.qbtn{min-height:46px}
+
+</style>
+<meta name="theme-color" content="#07111f"><meta name="application-name" content="RAJA SLOT"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="RAJA SLOT WEB18"><meta name="theme-color" content="#07111f"></head>
+<body>
+<div class="wrap">
+<section id="home" class="page active">
+  <div class="top"><div class="brand"><h1>👑 RAJA SLOT</h1><div class="coin">🪙 <span id="coinTop">2000</span></div></div></div>
+  <div class="hero"><h2>KOIN VIRTUAL</h2><p>Pilih game favoritmu dan kumpulkan progres lokal.</p></div>
+  <div class="daily"><div>🎁 <b>HADIAH HARIAN<br>+250 KOIN</b></div><button id="dailyBtn" class="btn">KLAIM</button></div>
+  
+<div style="margin:0 16px 14px;padding:12px;border-radius:16px;background:#111d31;border:1px solid #2d405f;display:flex;justify-content:space-between;gap:10px">
+  <div><small style="color:#9eabc0">PEMAIN</small><br><b id="playerName">Pemain Raja</b></div>
+  <div style="text-align:right"><small style="color:#9eabc0">GAME TERAKHIR</small><br><b id="lastGameLabel">-</b></div>
+</div>
+
+<div style="margin:0 16px 14px;padding:9px 12px;border-radius:14px;background:#10251f;border:1px solid #2f624f;color:#b7e7d0;text-align:center;font-weight:900;font-size:.8rem">
+✅ V131 CLEAN STABLE • 18 GAME TERHUBUNG
+</div>
+<div style="margin:0 16px 14px;padding:9px 12px;border-radius:14px;background:#10251f;border:1px solid #2f624f;color:#b7e7d0;text-align:center;font-weight:900;font-size:.8rem">
+✅ V141 STABLE PLAY CANDIDATE • 18 GAME
+</div><div style="margin:0 16px 14px;padding:9px 12px;border-radius:14px;background:#10251f;border:1px solid #2f624f;color:#b7e7d0;text-align:center;font-weight:900;font-size:.8rem">
+👑 V175 • DEVICE TEST CANDIDATE
+</div><div style="margin:0 16px 14px;padding:10px;border-radius:14px;background:#101c2f;border:1px solid #30435f;font-size:.8rem">
+🎖️ <b>Pencapaian:</b> <span id="achievementText">Pemula</span>
+</div>
+<div style="margin:0 16px 14px;padding:9px 12px;border-radius:14px;background:#2a1c40;border:1px solid #6e4c98;color:#eadcff;text-align:center;font-weight:900;font-size:.8rem">
+👑 WEB18 V60 • DEPLOYABLE PACKAGE
+</div><div style="margin:0 16px 14px;padding:10px 12px;border-radius:14px;background:#171b28;border:1px solid #3a4254;color:#c8d0dd;font-size:.76rem">
+🔒 Data akun, saldo demo, dan progres pada versi ini disimpan lokal di perangkat/browser.
+</div><div style="margin:0 16px 14px;padding:10px 12px;border-radius:14px;background:#2a2010;border:1px solid #6a5328;color:#f4dda2;font-size:.76rem">
+🛡️ Admin browser hanya untuk pengujian. Pada deployment publik, perubahan saldo harus melalui server dan audit log.
+</div><div id="netState" style="margin:0 16px 14px;padding:9px 12px;border-radius:14px;background:#101a2d;border:1px solid #31425f;font-size:.78rem">🌐 Jaringan: memeriksa...</div><div style="margin:0 16px 14px;padding:10px 12px;border-radius:14px;background:#101a2d;border:1px solid #31425f;font-size:.78rem">
+🌐 Backend: <b id="backendMode">LOCAL MOCK</b> • Status: <b id="backendHealth">SIAP</b>
+</div><div id="webStatus" style="margin:0 16px 14px;padding:9px 12px;border-radius:14px;background:#10251f;border:1px solid #2f624f;color:#b7e7d0;font-weight:900;font-size:.8rem">● SISTEM LOKAL SIAP</div><div class="stats3" style="margin:0 16px 14px">
+<div class="stat"><small>GAME DIBUKA</small><b id="webGamesOpened">0</b></div>
+<div class="stat"><small>SPIN</small><b id="webSpins">0</b></div>
+<div class="stat"><small>TOPUP DEMO</small><b id="webTopups">0</b></div>
+</div><div id="profileSummary" style="margin:0 16px 14px;padding:10px 12px;border-radius:14px;background:#111c30;border:1px solid #32435f;font-size:.82rem">
+👤 <b id="summaryName">Pemain Raja</b> • <span id="summaryId">ID</span> • 🪙 <span id="summaryCoins">0</span> koin
+</div><div class="quickbar">
+  <button id="accountBtn" class="qbtn">👤 Akun</button><button id="loginBtn" class="qbtn">🔑 Login</button><button id="serverAuthBtn" class="qbtn">🌐 Akun Server</button><button id="apiConfigBtn" class="qbtn">⚙️ Server</button><button id="pinBtn" class="qbtn">🔐 PIN</button>
+  <button id="topupBtn" class="qbtn">🪙 Isi Koin</button>
+  <button id="rulesBtn" class="qbtn">🔞 Aturan 18+</button><button id="adminBtn" class="qbtn">🛠️ Admin Demo</button><button id="adminDashBtn" class="qbtn">📊 Dashboard</button><button id="serverLedgerBtn" class="qbtn">📒 Ledger</button><button id="dailyWebBtn" class="qbtn">🎁 Bonus Harian</button><button id="helpBtn" class="qbtn">❓ Bantuan</button><button id="releaseBtn" class="qbtn">✅ Checklist</button><button id="snapshotBtn" class="qbtn">💾 Simpan Sesi</button><button id="syncBtn" class="qbtn">☁️ Sinkronkan</button><button id="pingServerBtn" class="qbtn">🩺 Cek Server</button><button id="logoutServerBtn" class="qbtn">🚪 Logout Server</button><button id="restoreBtn" class="qbtn">♻️ Pulihkan Sesi</button><button id="downloadBackupBtn" class="qbtn">⬇️ Backup</button>
+</div>
+<div id="missionPanel" style="margin:0 16px 14px;padding:12px;border-radius:16px;background:#161f34;border:1px solid #3b4b67">
+<b>🏆 MISI HARI INI</b><div style="margin-top:6px;color:#b8c3d3;font-size:.82rem">Mainkan 3 game berbeda • <span id="missionProgress">0/3</span></div>
+</div><div id="recentBlock" style="margin:0 16px 14px;padding:12px;border-radius:16px;background:#111d31;border:1px solid #2f405e;display:none">
+<small style="color:#9eabc0">TERAKHIR DIMAINKAN</small><div id="recentGame" style="font-weight:900;margin-top:4px"></div>
+</div><div class="tabs">
+    <button class="tab active" data-filter="all">Semua</button>
+    <button class="tab" data-filter="slot">🎰 Slot</button>
+    <button class="tab" data-filter="table">🀄 Domino & Kartu</button>
+    <button class="tab" data-filter="arcade">🎮 Arcade</button>
+  <button id="soundToggle" class="tab">🔊 Suara</button><button id="selfTestBtn" class="tab">🧪 Uji Sistem</button></div>
+  <input id="search" class="search" placeholder="Cari game...">
+  <div class="section-title"><h3>🔥 GAME</h3><span id="countLabel"></span></div>
+  <div id="gameGrid" class="grid"></div>
+  <div class="disclaimer">Simulasi koin virtual • tanpa deposit • tanpa withdraw • tanpa hadiah uang nyata.</div>
+</section>
+
+<section id="slot" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2 id="slotTitle">Slot</h2><div class="coin">🪙 <span id="coinSlot">0</span></div></div>
+  <div style="margin:0 16px 10px;padding:10px 12px;border-radius:14px;background:#121e31;border:1px solid #33445d;font-size:.78rem;color:#bfc9d8">
+<b>Paytable:</b> 3 sama = 2× • 4 sama = 5× • 5 sama = 12× bet
+</div><div id="reels" class="reels"></div>
+  <div style="margin:0 16px 10px;padding:10px 12px;border-radius:14px;background:#111d31;border:1px solid #33445d;font-size:.76rem">
+<b>Riwayat hasil:</b> <span id="slotHistory">Belum ada spin.</span>
+</div><div id="slotStatus" class="status">Siap bermain.</div>
+  <div class="controls">
+    <div class="row"><button id="betMinus" class="btn secondary">− BET</button><b>BET <span id="betLabel">10</span></b><button id="betPlus" class="btn secondary">+ BET</button></div>
+    <div class="row"><button id="spinBtn" class="btn">🎰 SPIN</button><button id="autoBtn" class="btn secondary">AUTO 10x</button><button id="stopAutoBtn" class="btn secondary">STOP</button></div>
+    <div class="mini">3/4/5 simbol sama dari kiri pada satu baris membayar 2×/5×/12× bet.</div>
+  </div>
+</section>
+
+<section id="domino" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2>🀄 Royal Domino</h2><div class="coin">🪙 <span id="coinDomino">0</span></div></div>
+  <div class="tablefelt"><div id="dominoBots">🤖 Bot A • 🤖 Bot B • 🤖 Bot C</div><div id="dominoChain" class="chain"></div><div><b>Kartu Anda</b><div id="dominoHand" class="hand"></div></div></div>
+  <div class="stats3"><div class="stat"><small>RONDE</small><b id="dominoRound">0</b></div><div class="stat"><small>SKOR</small><b id="dominoScore">0</b></div><div class="stat"><small>SISA</small><b id="dominoRemain">0</b></div></div>
+  <div class="controls"><div id="dominoStatus" class="status">Tekan MULAI RONDE.</div><div class="row"><button id="dominoStart" class="btn">🀄 MULAI RONDE</button><button id="dominoPass" class="btn secondary">LEWAT</button></div></div>
+</section>
+
+
+<section id="capsa" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2>🃏 Capsa Royal</h2><div class="coin">🪙 <span id="coinCapsa">0</span></div></div>
+  <div class="controls">
+    <div class="stats3">
+<div class="stat"><small>ATAS</small><b id="capsaTop">3</b></div>
+<div class="stat"><small>TENGAH</small><b id="capsaMid">5</b></div>
+<div class="stat"><small>BAWAH</small><b id="capsaBot">5</b></div>
+</div><div id="capsaStatus" class="status">Tekan BAGI 13 KARTU.</div>
+    <div id="capsaHand" class="cardarea"></div>
+    <div class="row"><button id="capsaDeal" class="btn">🃏 BAGI 13 KARTU</button><button id="capsaSort" class="btn secondary">URUTKAN</button></div>
+    <div class="mini">Versi santai: susun 13 kartu dan bandingkan jumlah nilai kartu dengan bot.</div>
+  </div>
+</section>
+
+<section id="royal21" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2>🃏 Royal 21</h2><div class="coin">🪙 <span id="coin21">0</span></div></div>
+  <div class="controls"><div class="status" id="r21Status">Tekan MULAI.</div><b>Dealer: <span id="dealerScore">0</span></b><div id="dealerCards" class="cardarea"></div><b>Anda: <span id="playerScore">0</span></b><div id="playerCards" class="cardarea"></div><div class="row"><button id="r21Start" class="btn">MULAI</button><button id="r21Hit" class="btn secondary">HIT</button><button id="r21Stand" class="btn secondary">STAND</button></div></div>
+</section>
+
+<section id="dice" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2>🎲 Dice King</h2><div class="coin">🪙 <span id="coinDice">0</span></div></div>
+  <div class="row"><button id="diceHighMode" class="btn secondary">MODE TINGGI</button><button id="diceDoubleMode" class="btn secondary">MODE DOUBLE</button></div><div id="diceBox" class="dicebox">⚀ ⚀</div><div id="diceStatus" class="status">Tekan LEMPAR DADU.</div><div class="controls"><button id="diceBtn" class="btn">🎲 LEMPAR DADU</button></div>
+</section>
+
+<section id="ludo" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2>🎯 Royal Ludo</h2><div class="coin">🪙 <span id="coinLudo">0</span></div></div>
+  <div id="ludoBoard" class="board"></div><div class="stats3"><div class="stat"><small>ANDA</small><b id="ludoYou">0</b></div><div class="stat"><small>BOT</small><b id="ludoBot">0</b></div><div class="stat"><small>FINISH</small><b>29</b></div></div><div id="ludoStatus" class="status">Anda mulai di kotak 0.</div><div class="controls"><button id="ludoBtn" class="btn">🎲 KOCOK DADU</button></div>
+</section>
+
+<section id="puzzle" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2>👑 Crown Puzzle</h2><div class="coin">🪙 <span id="coinPuzzle">0</span></div></div>
+  <div id="puzzleBoard" class="puzzle"></div><div class="stats3"><div class="stat"><small>LANGKAH</small><b id="puzzleMoves">0</b></div><div class="stat"><small>TARGET</small><b>1–15</b></div><div class="stat"><small>BONUS</small><b>200</b></div></div><div id="puzzleStatus" class="status">Susun angka 1–15.</div><div class="controls"><button id="puzzleShuffle" class="btn">🔀 ACAK ULANG</button></div>
+</section>
+
+<section id="gems" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2>💎 Gem Match</h2><div class="coin">🪙 <span id="coinGem">0</span></div></div>
+  <div class="stats3"><div class="stat"><small>SKOR</small><b id="gemScore">0</b></div><div class="stat"><small>GERAK</small><b id="gemMoves">20</b></div><div class="stat"><small>COMBO</small><b id="gemCombo">0</b></div></div>
+  <div id="gemBoard" class="gems"></div><div id="gemStatus" class="status">Pilih 2 gem bersebelahan.</div><div class="controls"><button id="gemNew" class="btn">GAME BARU</button></div>
+</section>
+
+<section id="wheel" class="page">
+  <div class="game-head"><button class="back" data-home>← Lobby</button><h2>🎡 Royal Wheel</h2><div class="coin">🪙 <span id="coinWheel">0</span></div></div>
+  <div id="wheelDisk" class="wheel">ROYAL<br>WHEEL</div><div id="wheelStatus" class="status">Putar untuk bonus koin virtual.</div><div class="controls"><button id="wheelBtn" class="btn">🎡 PUTAR RODA</button></div>
+</section>
+</div>
+
+<nav class="bottom"><button class="nav active" data-home><b>🏠</b>Lobby</button><button class="nav" id="navMission"><b>🏆</b>Rank/Misi</button><button class="nav" data-home><b>👑</b>Mulai</button><button class="nav" id="navProfile"><b>🛍️</b>Profil</button></nav>
+
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const STORAGE='raja-slot-v175-clean';
+let state={coins:2000,bet:10,daily:false,lastGame:null};
+try{state={...state,...JSON.parse(localStorage.getItem(STORAGE)||'{}')}}catch(e){}
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify(state))}catch(e){}}
+function syncCoins(){['coinTop','coinSlot','coinDomino','coinCapsa','coin21','coinDice','coinLudo','coinPuzzle','coinGem','coinWheel'].forEach(id=>{if($(id))$(id).textContent=state.coins})}
+function page(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$(id).classList.add('active');window.scrollTo(0,0);syncCoins()}
+document.querySelectorAll('[data-home]').forEach(b=>b.onclick=()=>page('home'));
+
+const games=[
+['Fruit Crown','🍒','slot'],['Diamond 7','💎','slot'],['Golden Bell','🔔','slot'],['Star Rush','⭐','slot'],['Lucky Grape','🍇','slot'],
+['Treasure Spin','🏆','slot'],['Dragon Fortune','🐉','slot'],['Panda Coins','🐼','slot'],['Ocean King','🔱','slot'],['Pharaoh Gold','🏺','slot'],
+['Royal Domino','🀄','table'],['Capsa Royal','🃏','table'],['Royal 21','🃏','table'],['Dice King','🎲','arcade'],['Royal Ludo','🎯','arcade'],['Crown Puzzle','👑','arcade'],['Gem Match','💎','arcade'],['Royal Wheel','🎡','arcade']
+];
+const symbols={
+'Fruit Crown':['🍒','🍋','🍇','🍉','🍊','👑'],'Diamond 7':['💎','7️⃣','🔷','🔶','⭐','👑'],'Golden Bell':['🔔','🪙','⭐','💰','👑','7️⃣'],
+'Star Rush':['⭐','🌙','☀️','🪐','🚀','💎'],'Lucky Grape':['🍇','🍒','🍋','🍀','🔔','👑'],'Treasure Spin':['🏆','💎','🪙','🎁','⭐','👑'],
+'Dragon Fortune':['🐉','🔥','🏮','🪙','💎','👑'],'Panda Coins':['🐼','🎋','🪙','🍊','💎','👑'],'Ocean King':['🔱','🐠','🐬','🐚','💎','👑'],'Pharaoh Gold':['🏺','☀️','🐈','💎','🪙','👑']
+};
+function renderGrid(filter='all',q=''){
+ const g=$('gameGrid');g.innerHTML='';
+ const list=games.filter(x=>(filter==='all'||x[2]===filter)&&x[0].toLowerCase().includes(q.toLowerCase()));
+ $('countLabel').textContent=list.length+' GAME';
+ list.forEach(([name,emoji,cat])=>{
+  const c=document.createElement('div');c.className='card';c.innerHTML=`<div class="emoji">${emoji}</div><h4>${name}</h4><small>${cat==='slot'?'Slot 5×3':'Game santai virtual'}</small><div class="play">▶ MAIN</div>`;
+  c.onclick=()=>openGame(name,cat);g.appendChild(c);
+ });
+}
+function openGame(name,cat){
+ state.lastGame=name;save();
+ if(cat==='slot'){state.slot=name;$('slotTitle').textContent=name;initReels();page('slot');return}
+ const map={'Royal Domino':'domino','Capsa Royal':'capsa','Royal 21':'royal21','Dice King':'dice','Royal Ludo':'ludo','Crown Puzzle':'puzzle','Gem Match':'gems','Royal Wheel':'wheel'};
+ page(map[name]);
+}
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');renderGrid(t.dataset.filter,$('search').value)});
+$('search').oninput=()=>renderGrid(document.querySelector('.tab.active').dataset.filter,$('search').value);
+$('dailyBtn').onclick=()=>{if(state.daily)return;state.daily=true;state.coins+=250;save();syncCoins();$('dailyBtn').textContent='DIKLAIM';$('dailyBtn').disabled=true};
+if(state.daily){$('dailyBtn').textContent='DIKLAIM';$('dailyBtn').disabled=true}
+
+let autoLeft=0,autoTimer=null;
+function initReels(){const arr=symbols[state.slot]||symbols['Fruit Crown'];$('reels').innerHTML='';for(let i=0;i<15;i++){const d=document.createElement('div');d.className='cell';d.textContent=arr[Math.floor(Math.random()*arr.length)];$('reels').appendChild(d)}$('betLabel').textContent=state.bet}
+function evaluate(cells){
+ let win=0;const rows=[[0,1,2,3,4],[5,6,7,8,9],[10,11,12,13,14]];
+ rows.forEach(r=>{const s=r.map(i=>cells[i].textContent);let n=1;for(let i=1;i<5;i++){if(s[i]===s[0])n++;else break}if(n>=3){win+=state.bet*(n===3?2:n===4?5:12);for(let i=0;i<n;i++)cells[r[i]].classList.add('win')}});return win
+}
+async function spin(){
+ if(state.coins<state.bet){$('slotStatus').textContent='Koin virtual tidak cukup.';stopAuto();return}
+ state.coins-=state.bet;const arr=symbols[state.slot]||symbols['Fruit Crown'];const cells=[...$('reels').children];cells.forEach(c=>{c.classList.remove('win');c.classList.add('spinfx')});await new Promise(r=>setTimeout(r,220));cells.forEach(c=>{c.classList.remove('spinfx');c.textContent=arr[Math.floor(Math.random()*arr.length)]});
+ const win=evaluate(cells);if(win){state.coins+=win;$('slotStatus').textContent='🏆 Menang '+win+' koin virtual!'}else $('slotStatus').textContent='Belum menang. Coba lagi.';
+ save();syncCoins()
+}
+$('spinBtn').onclick=spin;$('betMinus').onclick=()=>{state.bet=Math.max(5,state.bet-5);$('betLabel').textContent=state.bet;save()};$('betPlus').onclick=()=>{state.bet=Math.min(100,state.bet+5);$('betLabel').textContent=state.bet;save()};
+$('autoBtn').onclick=()=>{if(autoTimer)return;autoLeft=10;autoTimer=setInterval(()=>{if(autoLeft<=0)return stopAuto();spin();autoLeft--},650)};
+function stopAuto(){clearInterval(autoTimer);autoTimer=null;autoLeft=0}$('stopAutoBtn').onclick=stopAuto;
+
+// Domino clean engine
+let d={hand:[],chain:[],round:0,score:0,passes:0};
+function fullDomino(){const a=[];for(let i=0;i<=6;i++)for(let j=i;j<=6;j++)a.push([i,j]);return a.sort(()=>Math.random()-.5)}
+function drawDomino(){const h=$('dominoHand');h.innerHTML='';const ends=d.chain.length?[d.chain[0][0],d.chain[d.chain.length-1][1]]:null;d.hand.forEach((t,i)=>{const b=document.createElement('button');b.className='tile';b.textContent=t[0]+'|'+t[1];const ok=!ends||t.includes(ends[0])||t.includes(ends[1]);if(ok)b.classList.add('playable');b.onclick=()=>playTile(i);h.appendChild(b)});$('dominoRemain').textContent=d.hand.length}
+function drawChain(){const c=$('dominoChain');c.innerHTML='';d.chain.forEach(t=>{const x=document.createElement('div');x.className='tile';x.textContent=t[0]+'|'+t[1];c.appendChild(x)})}
+function startDomino(){const set=fullDomino();d.hand=set.slice(0,7);d.chain=[];d.round++;d.passes=0;$('dominoRound').textContent=d.round;$('dominoStatus').textContent='Pilih kartu yang menyala.';drawDomino();drawChain()}
+function playTile(i){let t=d.hand[i];if(!d.chain.length)d.chain.push(t);else{let L=d.chain[0][0],R=d.chain[d.chain.length-1][1];if(t[0]===R)d.chain.push(t);else if(t[1]===R)d.chain.push([t[1],t[0]]);else if(t[1]===L)d.chain.unshift(t);else if(t[0]===L)d.chain.unshift([t[1],t[0]]);else return}d.hand.splice(i,1);drawDomino();drawChain();if(!d.hand.length){d.score+=100;state.coins+=100;$('dominoScore').textContent=d.score;$('dominoStatus').textContent='🏆 Ronde selesai! +100 koin virtual';save();syncCoins()}else{$('dominoStatus').textContent='Bot sedang berpikir...';setTimeout(()=>{const ends=d.chain.length?[d.chain[0][0],d.chain[d.chain.length-1][1]]:null;const pool=fullDomino();let bt=pool.find(t=>!ends||t.includes(ends[0])||t.includes(ends[1]));if(bt&&ends){let L=ends[0],R=ends[1];if(bt[0]===R)d.chain.push(bt);else if(bt[1]===R)d.chain.push([bt[1],bt[0]]);else if(bt[1]===L)d.chain.unshift(bt);else if(bt[0]===L)d.chain.unshift([bt[1],bt[0]])}drawChain();$('dominoStatus').textContent='Giliran Anda.';},420)}}
+$('dominoStart').onclick=startDomino;$('dominoPass').onclick=()=>{$('dominoStatus').textContent='Anda melewatkan giliran.'};
+
+// Royal 21
+let deck21=[],p21=[],dealer21=[],active21=false;
+function deck(){const suits=['♠','♥','♦','♣'],ranks=['A','2','3','4','5','6','7','8','9','10','J','Q','K'];return suits.flatMap(s=>ranks.map(r=>({s,r}))).sort(()=>Math.random()-.5)}
+function score21(h){let s=0,a=0;h.forEach(c=>{if(c.r==='A'){s+=11;a++}else if(['J','Q','K'].includes(c.r))s+=10;else s+=+c.r});while(s>21&&a){s-=10;a--}return s}
+function render21(){const mk=(id,h)=>{$(id).innerHTML='';h.forEach(c=>{const x=document.createElement('div');x.className='playingcard';x.textContent=c.r+c.s;$(id).appendChild(x)})};mk('playerCards',p21);mk('dealerCards',dealer21);$('playerScore').textContent=score21(p21);$('dealerScore').textContent=score21(dealer21)}
+function start21(){deck21=deck();p21=[deck21.pop(),deck21.pop()];dealer21=[deck21.pop(),deck21.pop()];active21=true;$('r21Status').textContent='HIT atau STAND?';render21()}
+function finish21(){while(score21(dealer21)<17)dealer21.push(deck21.pop());const p=score21(p21),dsc=score21(dealer21);let msg='';if(p>21)msg='Bust — dealer menang.';else if(dsc>21||p>dsc){msg='🏆 Anda menang +120 koin';state.coins+=120}else if(p===dsc)msg='Seri.';else msg='Dealer menang.';active21=false;$('r21Status').textContent=msg;save();syncCoins();render21()}
+$('r21Start').onclick=start21;$('r21Hit').onclick=()=>{if(!active21)return;p21.push(deck21.pop());render21();if(score21(p21)>=21)finish21()};$('r21Stand').onclick=()=>{if(active21)finish21()};
+
+// Dice
+const diceChars=['⚀','⚁','⚂','⚃','⚄','⚅'];
+$('diceBtn').onclick=()=>{const a=1+Math.floor(Math.random()*6),b=1+Math.floor(Math.random()*6),c=1+Math.floor(Math.random()*6),e=1+Math.floor(Math.random()*6);$('diceBox').textContent=diceChars[a-1]+' '+diceChars[b-1]+'  vs  '+diceChars[c-1]+' '+diceChars[e-1];const p=a+b,o=c+e;if(p>o){state.coins+=90;$('diceStatus').textContent='🏆 Anda menang +90 koin'}else if(p===o)$('diceStatus').textContent='Seri.';else $('diceStatus').textContent='Bot menang.';save();syncCoins()};
+
+// Ludo
+let lpos=0,bpos=0;
+function renderLudo(){const b=$('ludoBoard');b.innerHTML='';for(let i=0;i<30;i++){const s=document.createElement('div');s.className='sq';if(i===lpos){s.classList.add('p');s.textContent='👑'}if(i===bpos){s.classList.add('b');s.textContent+=(s.textContent?' ':'')+'🤖'}b.appendChild(s)}}
+$('ludoBtn').onclick=()=>{const r=1+Math.floor(Math.random()*6),rb=1+Math.floor(Math.random()*6);lpos=Math.min(29,lpos+r);bpos=Math.min(29,bpos+rb);if(lpos===29){state.coins+=180;$('ludoStatus').textContent='🏆 Anda sampai finish! +180 koin';lpos=0;bpos=0}else if(bpos===29){$('ludoStatus').textContent='Bot sampai finish lebih dulu.';lpos=0;bpos=0}else $('ludoStatus').textContent=`Anda ${r}, Bot ${rb}`;renderLudo();save();syncCoins()};renderLudo();
+
+// Puzzle
+let pz=[];
+function solvableShuffle(){pz=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0];for(let n=0;n<120;n++){const z=pz.indexOf(0),r=Math.floor(z/4),c=z%4,opts=[];if(r)opts.push(z-4);if(r<3)opts.push(z+4);if(c)opts.push(z-1);if(c<3)opts.push(z+1);const q=opts[Math.floor(Math.random()*opts.length)];[pz[z],pz[q]]=[pz[q],pz[z]]}renderPuzzle()}
+function renderPuzzle(){const b=$('puzzleBoard');b.innerHTML='';pz.forEach((v,i)=>{const x=document.createElement('button');x.className='pz'+(!v?' blank':'');x.textContent=v||'';x.onclick=()=>movePuzzle(i);b.appendChild(x)})}
+function movePuzzle(i){const z=pz.indexOf(0),a=Math.abs((i%4)-(z%4))+Math.abs(Math.floor(i/4)-Math.floor(z/4));if(a!==1)return;[pz[i],pz[z]]=[pz[z],pz[i]];renderPuzzle();if(pz.every((v,i)=>v===(i===15?0:i+1))){state.coins+=200;$('puzzleStatus').textContent='🏆 Puzzle selesai! +200 koin';save();syncCoins()}}
+$('puzzleShuffle').onclick=solvableShuffle;solvableShuffle();
+
+// Gem match
+const gemSym=['💎','🔷','🔶','💚','💜','❤️'];let gb=[],gsel=null,gscore=0,gmoves=20;
+function newGems(){gb=Array.from({length:36},()=>gemSym[Math.floor(Math.random()*gemSym.length)]);gscore=0;gmoves=20;gsel=null;renderGems()}
+function renderGems(){const b=$('gemBoard');b.innerHTML='';gb.forEach((v,i)=>{const x=document.createElement('button');x.className='gem'+(gsel===i?' sel':'');x.textContent=v;x.onclick=()=>pickGem(i);b.appendChild(x)});$('gemScore').textContent=gscore;$('gemMoves').textContent=gmoves}
+function matches(){const set=new Set;for(let r=0;r<6;r++)for(let c=0;c<4;c++){let i=r*6+c;if(gb[i]===gb[i+1]&&gb[i]===gb[i+2]){set.add(i);set.add(i+1);set.add(i+2)}}for(let c=0;c<6;c++)for(let r=0;r<4;r++){let i=r*6+c;if(gb[i]===gb[i+6]&&gb[i]===gb[i+12]){set.add(i);set.add(i+6);set.add(i+12)}}return [...set]}
+function collapse(ms){ms.forEach(i=>gb[i]=gemSym[Math.floor(Math.random()*gemSym.length)]);gscore+=ms.length*10}
+function pickGem(i){if(gmoves<=0)return;if(gsel===null){gsel=i;renderGems();return}const a=gsel,b=i;gsel=null;const adj=Math.abs(a-b)===1&&Math.floor(a/6)===Math.floor(b/6)||Math.abs(a-b)===6;if(!adj){renderGems();return}[gb[a],gb[b]]=[gb[b],gb[a]];const m=matches();if(!m.length)[gb[a],gb[b]]=[gb[b],gb[a]];else collapse(m);gmoves--;renderGems();if(gmoves===0){const reward=Math.floor(gscore/20);state.coins+=reward;$('gemStatus').textContent='Selesai. Bonus '+reward+' koin';save();syncCoins()}}
+$('gemNew').onclick=newGems;newGems();
+
+// Wheel
+const rewards=[25,50,75,100,125,150,200,250];let wturn=0;
+$('wheelBtn').onclick=()=>{const r=rewards[Math.floor(Math.random()*rewards.length)];wturn+=720+Math.floor(Math.random()*360);$('wheelDisk').style.transform='rotate('+wturn+'deg)';$('wheelBtn').disabled=true;setTimeout(()=>{state.coins+=r;$('wheelStatus').textContent='🎁 Bonus '+r+' koin virtual';$('wheelBtn').disabled=false;save();syncCoins()},1450)};
+
+$('navMission').onclick=()=>alert('Misi: coba minimal 3 game berbeda dan kumpulkan progres lokal.');
+$('navProfile').onclick=()=>alert('Profil lokal RAJA SLOT. Tidak ada akun uang nyata atau cash-out.');
+renderGrid();syncCoins();
+
+
+(function(){
+  const p=document.getElementById('lastGameLabel');
+  if(p)p.textContent=state.lastGame||'-';
+})();
+
+
+
+let capsaHand=[];
+function capsaValue(c){const map={A:14,K:13,Q:12,J:11};return map[c.r]||Number(c.r)}
+function renderCapsa(){
+ const h=$('capsaHand');if(!h)return;h.innerHTML='';
+ capsaHand.forEach(c=>{const x=document.createElement('div');x.className='playingcard';x.textContent=c.r+c.s;h.appendChild(x)})
+}
+$('capsaDeal').onclick=()=>{
+ const dk=deck();capsaHand=dk.splice(0,13);renderCapsa();
+ const player=capsaHand.reduce((a,c)=>a+capsaValue(c),0);
+ const bot=dk.splice(0,13).reduce((a,c)=>a+capsaValue(c),0);
+ if(player>=bot){state.coins+=150;$('capsaStatus').textContent='🏆 Nilai tangan unggul! +150 koin virtual'}else $('capsaStatus').textContent='Bot unggul ronde ini.';
+ save();syncCoins()
+};
+$('capsaSort').onclick=()=>{capsaHand.sort((a,b)=>capsaValue(b)-capsaValue(a));renderCapsa()};
+
+
+
+(function(){
+ const rb=document.getElementById('recentBlock'),rg=document.getElementById('recentGame');
+ if(state.lastGame){rb.style.display='block';rg.textContent='▶ '+state.lastGame;rb.onclick=()=>{const g=games.find(x=>x[0]===state.lastGame);if(g)openGame(g[0],g[2])}}
+})();
+
+
+
+function update21Buttons(){
+ if($('r21Hit'))$('r21Hit').disabled=!active21;
+ if($('r21Stand'))$('r21Stand').disabled=!active21;
+}
+const _start21=start21;start21=function(){_start21();update21Buttons()}
+const _finish21=finish21;finish21=function(){_finish21();update21Buttons()}
+update21Buttons();
+
+
+
+window.RAJA_DIAG=function(){
+ return {version:138,coins:state.coins,lastGame:state.lastGame,games:games.length,protocol:location.protocol};
+};
+
+
+
+window.addEventListener('popstate',()=>page('home'));
+
+
+
+window.RS_SLOT_HISTORY=[];
+const _spin=spin;
+spin=async function(){
+ const before=state.coins;
+ await _spin();
+ const delta=state.coins-before;
+ RS_SLOT_HISTORY.unshift(delta>0?'+'+delta:'-'+state.bet);
+ RS_SLOT_HISTORY=RS_SLOT_HISTORY.slice(0,5);
+ if($('slotHistory'))$('slotHistory').textContent=RS_SLOT_HISTORY.join(' • ');
+}
+
+
+
+const _render21=render21;
+render21=function(){
+ _render21();
+ if(active21 && dealer21.length>1){
+   const cards=[...$('dealerCards').children];
+   if(cards[1])cards[1].textContent='🂠';
+   $('dealerScore').textContent='?';
+ }
+}
+
+
+
+let diceMode='high';
+$('diceHighMode').onclick=()=>{diceMode='high';$('diceStatus').textContent='Mode angka tertinggi.'};
+$('diceDoubleMode').onclick=()=>{diceMode='double';$('diceStatus').textContent='Mode double: dapat bonus jika dua dadu sama.'};
+const _diceClick=$('diceBtn').onclick;
+$('diceBtn').onclick=()=>{
+ const before=state.coins; _diceClick();
+ if(diceMode==='double'){
+   const chars=$('diceBox').textContent.split('  vs  ')[0].trim().split(' ');
+   if(chars.length>=2 && chars[0]===chars[1]){state.coins+=50;$('diceStatus').textContent+=' • DOUBLE +50';save();syncCoins()}
+ }
+};
+
+
+
+const _renderLudo=renderLudo;
+renderLudo=function(){_renderLudo();if($('ludoYou'))$('ludoYou').textContent=lpos;if($('ludoBot'))$('ludoBot').textContent=bpos}
+renderLudo();
+
+
+
+let puzzleMovesCount=0;
+const _movePuzzle=movePuzzle;
+movePuzzle=function(i){const before=pz.join(',');_movePuzzle(i);if(before!==pz.join(',')){puzzleMovesCount++;$('puzzleMoves').textContent=puzzleMovesCount}}
+const _shufflePuzzle=solvableShuffle;
+solvableShuffle=function(){puzzleMovesCount=0;_shufflePuzzle();if($('puzzleMoves'))$('puzzleMoves').textContent=0}
+
+
+
+let gemComboCount=0;
+const _pickGem=pickGem;
+pickGem=function(i){
+ const before=gscore; _pickGem(i);
+ if(gscore>before)gemComboCount++; else if(gsel===null)gemComboCount=0;
+ if($('gemCombo'))$('gemCombo').textContent=gemComboCount;
+}
+const _newGems=newGems;
+newGems=function(){gemComboCount=0;_newGems();if($('gemCombo'))$('gemCombo').textContent=0}
+
+
+
+const _wheelClick=$('wheelBtn').onclick;
+$('wheelBtn').onclick=()=>{
+ if($('wheelBtn').disabled)return;
+ _wheelClick();
+ let left=2;
+ const old=$('wheelBtn').textContent;
+ const timer=setInterval(()=>{left--;if(left<=0){clearInterval(timer);$('wheelBtn').textContent=old}else $('wheelBtn').textContent='TUNGGU '+left+'s'},700);
+};
+
+
+
+let playedGames=new Set(JSON.parse(localStorage.getItem('rs-played')||'[]'));
+const _openGame=openGame;
+openGame=function(name,cat){playedGames.add(name);localStorage.setItem('rs-played',JSON.stringify([...playedGames]));_openGame(name,cat);if($('missionProgress'))$('missionProgress').textContent=Math.min(playedGames.size,3)+'/3'}
+if($('missionProgress'))$('missionProgress').textContent=Math.min(playedGames.size,3)+'/3';
+
+
+
+function updateAchievement(){const n=playedGames.size;const e=$('achievementText');if(e)e.textContent=n>=10?'Penjelajah Raja':n>=5?'Petualang':n>=3?'Aktif':'Pemula'}
+updateAchievement();
+
+
+
+let soundOn=localStorage.getItem('rs-sound')!=='off';
+function tone(){if(!soundOn)return;try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const a=window._rsa||(window._rsa=new A()),o=a.createOscillator(),g=a.createGain();o.frequency.value=520;g.gain.value=.02;o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+.04)}catch(e){}}
+$('soundToggle').onclick=()=>{soundOn=!soundOn;localStorage.setItem('rs-sound',soundOn?'on':'off');$('soundToggle').textContent=soundOn?'🔊 Suara':'🔇 Suara'};
+document.addEventListener('click',e=>{if(e.target.closest('button,.card'))tone()},true);
+
+
+document.addEventListener('click',e=>{if(e.target.closest('button,.card'))try{navigator.vibrate&&navigator.vibrate(8)}catch(x){}},true);
+
+document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAuto();save()}});window.addEventListener('pagehide',save);
+
+window.RAJA_ANDROID_BACK=()=>{if(!$('home').classList.contains('active')){page('home');return true}return false};window.RAJA_PAUSE=()=>{stopAuto();save()};
+
+window.RAJA_BUILD={version:161,status:'release-candidate',playable:true,virtualCoinsOnly:true};
+
+
+window.RAJA_RUNTIME_ERRORS=[];
+window.addEventListener('error',e=>RAJA_RUNTIME_ERRORS.push(String(e.message||'error')));
+window.addEventListener('unhandledrejection',e=>RAJA_RUNTIME_ERRORS.push(String(e.reason||'promise error')));
+
+
+
+window.RAJA_LOCAL_MODE=(location.protocol==='file:'||location.protocol==='content:');
+
+
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('home').classList.contains('active'))page('home')});
+
+
+window.RAJA_OFFLINE_READY=true;
+
+
+try{
+ const oldKeys=['raja-slot-v161-clean','raja-slot-v160-clean'];
+ if(!localStorage.getItem('raja-slot-v175-clean')){
+   for(const k of oldKeys){const v=localStorage.getItem(k);if(v){localStorage.setItem('raja-slot-v175-clean',v);break}}
+ }
+}catch(e){}
+
+
+window.RAJA_FEATURE_FREEZE=true;
+
+window.RAJA_BUILD={version:171,status:'android-handoff',playable:true,offline:true};
+
+
+$('selfTestBtn').onclick=()=>{
+ const checks=[
+ ['Lobby',!!$('home')],['10 Slot',Object.keys(symbols).length===10],['Domino',!!$('dominoStart')],
+ ['Capsa',!!$('capsaDeal')],['Royal21',!!$('r21Start')],['Dice',!!$('diceBtn')],
+ ['Ludo',!!$('ludoBtn')],['Puzzle',!!$('puzzleShuffle')],['Gem',!!$('gemNew')],
+ ['Wheel',!!$('wheelBtn')],['Storage',typeof localStorage!=='undefined']
+ ];
+ const bad=checks.filter(x=>!x[1]);alert(bad.length?'UJI SISTEM: GAGAL '+bad.map(x=>x[0]).join(', '):'UJI SISTEM: 11/11 OK');
+};
+
+
+
+document.addEventListener('touchend',e=>{
+ const c=e.target.closest('.card'); if(c && !c.dataset.touchGuard){c.dataset.touchGuard='1';setTimeout(()=>delete c.dataset.touchGuard,250)}
+},{passive:true});
+
+
+
+let profTimer=null;
+$('navProfile').addEventListener('pointerdown',()=>{profTimer=setTimeout(()=>{if(confirm('Reset progres lokal RAJA SLOT?')){localStorage.removeItem(STORAGE);localStorage.removeItem('rs-played');location.reload()}},1200)});
+['pointerup','pointercancel','pointerleave'].forEach(ev=>$('navProfile').addEventListener(ev,()=>clearTimeout(profTimer)));
+
+
+window.RAJA_BUILD={version:175,status:'device-test-candidate',playable:true,offline:true,selfTest:true};
+
+
+(function(){
+  const AGE_KEY='raja-slot-age18';
+  const PROFILE_KEY='raja-slot-profile';
+  function show(id){document.getElementById(id)?.classList.add('show')}
+  function hide(id){document.getElementById(id)?.classList.remove('show')}
+
+  if(localStorage.getItem(AGE_KEY)!=='yes') show('ageGate');
+  document.getElementById('ageAccept').onclick=()=>{localStorage.setItem(AGE_KEY,'yes');hide('ageGate')};
+  document.getElementById('ageExit').onclick=()=>{document.body.innerHTML='<div style="padding:40px;text-align:center;font-family:sans-serif">Akses ditutup. RAJA SLOT WEB ditujukan untuk pengguna 18+.</div>'};
+
+  document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>hide(b.dataset.close));
+
+  const storedProfile=JSON.parse(localStorage.getItem(PROFILE_KEY)||'null')||{
+    name:'Pemain Raja',
+    id:'RS-'+Math.random().toString(36).slice(2,8).toUpperCase()
+  };
+  localStorage.setItem(PROFILE_KEY,JSON.stringify(storedProfile));
+
+  function syncProfile(){
+    document.getElementById('playerNameInput').value=storedProfile.name;
+    document.getElementById('playerIdInput').value=storedProfile.id;
+  }
+  syncProfile();
+
+  document.getElementById('accountBtn').onclick=()=>{syncProfile();show('accountModal')};
+  document.getElementById('saveAccountBtn').onclick=()=>{
+    storedProfile.name=(document.getElementById('playerNameInput').value||'Pemain Raja').trim().slice(0,24);
+    localStorage.setItem(PROFILE_KEY,JSON.stringify(storedProfile));
+    hide('accountModal');
+    alert('Akun tersimpan: '+storedProfile.name);
+  };
+
+  document.getElementById('topupBtn').onclick=()=>show('topupModal');
+  document.querySelectorAll('.coinpack').forEach(btn=>{
+    btn.onclick=()=>{
+      const n=Number(btn.dataset.coins||0);
+      state.coins += n;
+      save(); syncCoins();
+      document.getElementById('topupStatus').textContent='Demo berhasil: +'+n.toLocaleString('id-ID')+' koin virtual.';
+    }
+  });
+
+  document.getElementById('rulesBtn').onclick=()=>alert(
+    'RAJA SLOT WEB 18+\\n\\n• Koin hanya virtual\\n• Tidak dapat ditukar rupiah\\n• Tidak ada withdraw/cash-out\\n• Tidak ada hadiah uang nyata\\n• Versi ini untuk hiburan'
+  );
+})();
+
+
+
+(function(){
+ const p=JSON.parse(localStorage.getItem('raja-slot-profile')||'{}');
+ if(document.getElementById('summaryName'))document.getElementById('summaryName').textContent=p.name||'Pemain Raja';
+ if(document.getElementById('summaryId'))document.getElementById('summaryId').textContent=p.id||'ID';
+ if(document.getElementById('summaryCoins'))document.getElementById('summaryCoins').textContent=(state.coins||0).toLocaleString('id-ID');
+ const oldSync=syncCoins; syncCoins=function(){oldSync(); if(document.getElementById('summaryCoins'))document.getElementById('summaryCoins').textContent=(state.coins||0).toLocaleString('id-ID')};
+})();
+
+
+
+(function(){
+ const KEY='raja-slot-topup-history';
+ function renderTopupHistory(){
+   const h=JSON.parse(localStorage.getItem(KEY)||'[]');
+   const el=document.getElementById('topupHistory');
+   if(el)el.innerHTML=h.length?h.slice(0,5).map(x=>'• '+x).join('<br>'):'Belum ada pengisian.';
+ }
+ document.querySelectorAll('.coinpack').forEach(btn=>{
+   const old=btn.onclick;
+   btn.onclick=()=>{old();const h=JSON.parse(localStorage.getItem(KEY)||'[]');h.unshift(new Date().toLocaleString('id-ID')+' — +'+Number(btn.dataset.coins).toLocaleString('id-ID')+' koin demo');localStorage.setItem(KEY,JSON.stringify(h.slice(0,10)));renderTopupHistory();}
+ });
+ renderTopupHistory();
+})();
+
+
+
+(function(){
+ const K='raja-slot-daily-web';
+ document.getElementById('dailyWebBtn').onclick=()=>{
+   const today=new Date().toISOString().slice(0,10);
+   if(localStorage.getItem(K)===today)return alert('Bonus harian sudah diambil hari ini.');
+   localStorage.setItem(K,today);state.coins+=250;save();syncCoins();alert('+250 koin virtual bonus harian');
+ };
+})();
+
+
+
+(function(){
+ let S=JSON.parse(localStorage.getItem('raja-slot-web-stats')||'{"games":0,"spins":0,"topups":0}');
+ const render=()=>{if(webGamesOpened)webGamesOpened.textContent=S.games;if(webSpins)webSpins.textContent=S.spins;if(webTopups)webTopups.textContent=S.topups};
+ const og=openGame;openGame=function(n,c){S.games++;localStorage.setItem('raja-slot-web-stats',JSON.stringify(S));render();og(n,c)};
+ const os=spin;spin=async function(){S.spins++;localStorage.setItem('raja-slot-web-stats',JSON.stringify(S));render();return await os()};
+ document.querySelectorAll('.coinpack').forEach(b=>{const oo=b.onclick;b.onclick=()=>{oo();S.topups++;localStorage.setItem('raja-slot-web-stats',JSON.stringify(S));render()}});
+ render();
+})();
+
+
+
+document.getElementById('pinBtn').onclick=()=>show('pinModal');
+document.getElementById('savePinBtn').onclick=()=>{
+ const v=(document.getElementById('pinInput').value||'').replace(/\D/g,'');
+ if(v.length<4)return alert('PIN minimal 4 digit.');
+ localStorage.setItem('raja-slot-session-pin',v);hide('pinModal');alert('PIN sesi tersimpan di perangkat ini.');
+};
+
+
+
+document.getElementById('helpBtn').onclick=()=>alert('BANTUAN RAJA SLOT WEB18\\n\\n1. Buat/simpan akun lokal.\\n2. Isi koin demo dari menu Isi Koin.\\n3. Pilih game.\\n4. Koin hanya virtual dan tidak dapat dicairkan.\\n5. Gunakan Uji Sistem bila tombol tidak merespons.');
+
+
+
+window.RAJA_WEB18_BACKUP=()=>JSON.stringify({profile:localStorage.getItem('raja-slot-profile'),state:localStorage.getItem(STORAGE),topup:localStorage.getItem('raja-slot-topup-history'),stats:localStorage.getItem('raja-slot-web-stats')});
+
+
+window.RAJA_WEB18_BUILD={version:11,status:'stable-link-candidate',virtualCoinsOnly:true};
+
+
+(function(){
+ const NEW='raja-slot-web18-stable';
+ if(!localStorage.getItem(NEW)){
+   for(const k of ['raja-slot-v175-clean','raja-slot-v174-clean','raja-slot-v173-clean']){
+     const v=localStorage.getItem(k); if(v){localStorage.setItem(NEW,v);break}
+   }
+ }
+ window.RAJA_WEB18_STORAGE=NEW;
+})();
+
+
+
+document.getElementById('snapshotBtn').onclick=()=>{
+ const snap={at:new Date().toISOString(),coins:state.coins,profile:localStorage.getItem('raja-slot-profile'),stats:localStorage.getItem('raja-slot-web-stats')};
+ localStorage.setItem('raja-slot-web18-snapshot',JSON.stringify(snap));
+ alert('Sesi lokal tersimpan.');
+};
+
+
+
+document.getElementById('restoreBtn').onclick=()=>{
+ const raw=localStorage.getItem('raja-slot-web18-snapshot');
+ if(!raw)return alert('Belum ada snapshot.');
+ const s=JSON.parse(raw);
+ if(typeof s.coins==='number'){state.coins=s.coins;save();syncCoins();}
+ if(s.profile)localStorage.setItem('raja-slot-profile',s.profile);
+ if(s.stats)localStorage.setItem('raja-slot-web-stats',s.stats);
+ alert('Sesi lokal dipulihkan. Muat ulang jika nama/statistik belum berubah.');
+};
+
+
+
+document.getElementById('adminBtn').onclick=()=>show('adminModal');
+document.getElementById('adminAddBtn').onclick=()=>{
+ const n=Math.max(0,Math.min(100000,Number(document.getElementById('adminAddCoins').value||0)));
+ if(!n)return alert('Masukkan jumlah koin demo.');
+ state.coins+=n;save();syncCoins();document.getElementById('adminLog').textContent='Admin demo menambahkan '+n.toLocaleString('id-ID')+' koin virtual.';
+};
+
+
+
+window.RAJA_WEB18_EXPORT=function(){
+ return JSON.stringify({
+  version:16,
+  profile:JSON.parse(localStorage.getItem('raja-slot-profile')||'{}'),
+  coins:state.coins,
+  stats:JSON.parse(localStorage.getItem('raja-slot-web-stats')||'{}'),
+  topups:JSON.parse(localStorage.getItem('raja-slot-topup-history')||'[]')
+ },null,2);
+};
+
+
+
+window.RAJA_HOST_CHECK=()=>{
+ const checks={https:location.protocol==='https:',local:location.protocol==='file:'||location.protocol==='content:',storage:!!window.localStorage,js:true};
+ return checks;
+};
+
+
+window.RAJA_WEB18_BUILD={version:21,status:'web-release-candidate',virtualCoinsOnly:true,serverConnected:false};
+
+
+window.RAJA_API={
+ mode:'local-mock',
+ async getProfile(){return JSON.parse(localStorage.getItem('raja-slot-profile')||'{}')},
+ async getBalance(){return {coins:state.coins}},
+ async addVirtualCoins(n,reason='admin-demo'){state.coins+=n;save();syncCoins();return {ok:true,coins:state.coins,reason}},
+ async health(){return {ok:true,mode:this.mode}}
+};
+
+
+
+RAJA_API.health().then(x=>{document.getElementById('backendMode').textContent=x.mode.toUpperCase();document.getElementById('backendHealth').textContent=x.ok?'SIAP':'GAGAL'});
+
+
+
+window.RAJA_AUDIT=function(type,detail){
+ const k='raja-slot-web18-audit',a=JSON.parse(localStorage.getItem(k)||'[]');
+ a.unshift({time:new Date().toISOString(),type,detail});
+ localStorage.setItem(k,JSON.stringify(a.slice(0,100)));
+};
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(b)RAJA_AUDIT('button',b.id||b.textContent.trim().slice(0,30))},true);
+
+
+
+window.RAJA_ADMIN={authenticated:false,login(pin){this.authenticated=(pin===localStorage.getItem('raja-slot-session-pin'));RAJA_AUDIT('admin-login',this.authenticated?'ok':'fail');return this.authenticated}};
+
+
+
+(function(){
+ const btn=document.getElementById('adminAddBtn');
+ if(!btn)return;
+ btn.onclick=async()=>{
+   const pin=prompt('Masukkan PIN sesi admin lokal:')||'';
+   if(!RAJA_ADMIN.login(pin))return alert('PIN salah.');
+   const n=Math.max(0,Math.min(100000,Number(document.getElementById('adminAddCoins').value||0)));
+   if(!n)return alert('Masukkan jumlah koin demo.');
+   const r=await RAJA_API.addVirtualCoins(n,'admin-demo');
+   document.getElementById('adminLog').textContent='Admin demo menambahkan '+n.toLocaleString('id-ID')+' koin virtual. Saldo '+r.coins.toLocaleString('id-ID');
+   RAJA_AUDIT('admin-add-coins',n);
+ };
+})();
+
+
+
+window.RAJA_RATE=(function(){let last=0;return function(ms=500){const now=Date.now();if(now-last<ms)return false;last=now;return true}})();
+
+
+
+window.RAJA_CONFIG={environment:'static-demo',apiBase:null,httpsRecommended:true,virtualCoinsOnly:true};
+
+
+
+window.RAJA_INTEGRATION_TEST=async()=>{
+ const h=await RAJA_API.health(),p=await RAJA_API.getProfile(),b=await RAJA_API.getBalance();
+ return {health:h.ok,profile:!!p,balance:typeof b.coins==='number',audit:Array.isArray(JSON.parse(localStorage.getItem('raja-slot-web18-audit')||'[]'))};
+};
+
+
+window.RAJA_WEB18_BUILD={version:31,status:'backend-handoff-candidate',virtualCoinsOnly:true,backendMode:'local-mock'};
+
+
+window.RAJA_SYNC={
+ async push(){
+   const payload={profile:JSON.parse(localStorage.getItem('raja-slot-profile')||'{}'),coins:state.coins,ts:Date.now()};
+   localStorage.setItem('raja-slot-web18-last-sync',JSON.stringify(payload));
+   RAJA_AUDIT('sync-push',payload.profile.id||'local');
+   return {ok:true,mode:'local-mock',payload};
+ },
+ async pull(){
+   const raw=localStorage.getItem('raja-slot-web18-last-sync');
+   if(!raw)return {ok:false,reason:'no-snapshot'};
+   const p=JSON.parse(raw); if(typeof p.coins==='number'){state.coins=p.coins;save();syncCoins();}
+   return {ok:true,payload:p};
+ }
+};
+
+
+
+document.getElementById('loginBtn').onclick=()=>show('loginModal');
+document.getElementById('loginDoBtn').onclick=()=>{
+ const n=(document.getElementById('loginName').value||'').trim(),p=document.getElementById('loginPass').value||'';
+ if(n.length<3||p.length<4)return alert('Nama minimal 3 karakter dan password minimal 4 karakter.');
+ const prof={name:n,id:'RS-'+btoa(unescape(encodeURIComponent(n))).replace(/[^A-Z0-9]/gi,'').slice(0,8).toUpperCase()};
+ localStorage.setItem('raja-slot-profile',JSON.stringify(prof));
+ localStorage.setItem('raja-slot-web18-auth-demo','1');
+ document.getElementById('loginStatus').textContent='Login demo aktif sebagai '+n;
+ RAJA_AUDIT('player-login',prof.id);
+};
+
+
+
+document.getElementById('syncBtn').onclick=async()=>{const r=await RAJA_SYNC.push();alert(r.ok?'Sinkronisasi demo tersimpan.':'Sinkronisasi gagal.');};
+
+
+
+window.RAJA_LEDGER={
+ key:'raja-slot-web18-ledger',
+ add(delta,reason){
+   const a=JSON.parse(localStorage.getItem(this.key)||'[]');
+   a.unshift({id:'L'+Date.now(),at:new Date().toISOString(),delta:Number(delta)||0,reason:String(reason||'unknown'),balance:state.coins});
+   localStorage.setItem(this.key,JSON.stringify(a.slice(0,300)));
+ },
+ list(){return JSON.parse(localStorage.getItem(this.key)||'[]')}
+};
+
+
+
+window.RAJA_BALANCE_CHECK=()=>({ok:Number.isFinite(state.coins)&&state.coins>=0,coins:state.coins,ledgerEntries:RAJA_LEDGER.list().length});
+
+
+
+window.RAJA_RECOVERY_TOKEN=()=>{
+ const p=JSON.parse(localStorage.getItem('raja-slot-profile')||'{}');
+ const token='RSR-'+(p.id||'LOCAL')+'-'+Date.now().toString(36).toUpperCase();
+ localStorage.setItem('raja-slot-web18-recovery-token',token); return token;
+};
+
+
+
+function refreshDash(){const p=JSON.parse(localStorage.getItem('raja-slot-profile')||'{}');dashPlayer.textContent=p.name||'-';dashCoins.textContent=(state.coins||0).toLocaleString('id-ID');dashLedger.textContent=RAJA_LEDGER.list().length}
+document.getElementById('adminDashBtn').onclick=()=>{refreshDash();show('adminDashModal')};
+document.getElementById('dashRefresh').onclick=refreshDash;
+
+
+
+window.RAJA_SECURITY={production:false,serverAuthRequiredForProduction:true,clientAdminIsDemoOnly:true,virtualCoinsOnly:true};
+
+
+
+window.RAJA_DEPLOYMENT_HEALTH=async()=>({
+ dom:!!document.getElementById('lobby'),
+ api:(await RAJA_API.health()).ok,
+ storage:!!window.localStorage,
+ balance:RAJA_BALANCE_CHECK().ok,
+ virtualCoinsOnly:RAJA_SECURITY.virtualCoinsOnly
+});
+
+
+window.RAJA_WEB18_BUILD={version:41,status:'server-sync-handoff',virtualCoinsOnly:true,production:false};
+
+
+window.RAJA_REMOTE={
+ base:'',
+ token:localStorage.getItem('raja-slot-web18-token')||'',
+ async call(path,opts={}){
+   const headers=Object.assign({'Content-Type':'application/json'},opts.headers||{});
+   if(this.token)headers.Authorization='Bearer '+this.token;
+   const r=await fetch(this.base+path,Object.assign({},opts,{headers}));
+   const j=await r.json().catch(()=>({ok:false,error:'bad_json'}));
+   if(!r.ok)throw new Error(j.error||('HTTP '+r.status));
+   return j;
+ }
+};
+
+
+
+document.getElementById('serverAuthBtn').onclick=()=>show('serverAuthModal');
+document.getElementById('serverRegisterBtn').onclick=async()=>{
+ try{
+   const name=serverName.value.trim(),password=serverPass.value;
+   const r=await RAJA_REMOTE.call('/api/register',{method:'POST',body:JSON.stringify({name,password})});
+   RAJA_REMOTE.token=r.token;localStorage.setItem('raja-slot-web18-token',r.token);
+   localStorage.setItem('raja-slot-profile',JSON.stringify(r.profile));
+   state.coins=r.coins;save();syncCoins();
+   serverAuthStatus.textContent='Terdaftar: '+r.profile.id;
+ }catch(e){serverAuthStatus.textContent='Gagal: '+e.message}
+};
+document.getElementById('serverLoginBtn').onclick=async()=>{
+ try{
+   const id=serverId.value.trim(),password=serverPass.value;
+   const r=await RAJA_REMOTE.call('/api/login',{method:'POST',body:JSON.stringify({id,password})});
+   RAJA_REMOTE.token=r.token;localStorage.setItem('raja-slot-web18-token',r.token);
+   localStorage.setItem('raja-slot-profile',JSON.stringify(r.profile));
+   state.coins=r.coins;save();syncCoins();
+   serverAuthStatus.textContent='Login server aktif.';
+ }catch(e){serverAuthStatus.textContent='Gagal: '+e.message}
+};
+
+
+
+window.RAJA_SERVER_SYNC=async()=>{
+ if(!RAJA_REMOTE.token)return {ok:false,reason:'no-token'};
+ const me=await RAJA_REMOTE.call('/api/me');
+ state.coins=me.coins;save();syncCoins();
+ localStorage.setItem('raja-slot-profile',JSON.stringify(me.profile));
+ return {ok:true,coins:me.coins};
+};
+document.getElementById('syncBtn').onclick=async()=>{
+ try{const r=await RAJA_SERVER_SYNC();alert(r.ok?'Saldo disinkronkan dari server.':'Belum login server.')}
+ catch(e){alert('Sinkronisasi gagal: '+e.message)}
+};
+
+
+
+document.getElementById('logoutServerBtn').onclick=()=>{
+ RAJA_REMOTE.token='';localStorage.removeItem('raja-slot-web18-token');
+ alert('Token login server dihapus dari perangkat.');
+};
+
+
+
+function updateNet(){netState.textContent='🌐 Jaringan: '+(navigator.onLine?'ONLINE':'OFFLINE')}
+window.addEventListener('online',updateNet);window.addEventListener('offline',updateNet);updateNet();
+
+
+
+document.getElementById('serverLedgerBtn').onclick=()=>show('serverLedgerModal');
+document.getElementById('loadServerLedgerBtn').onclick=async()=>{
+ try{
+  const r=await RAJA_REMOTE.call('/api/ledger');
+  serverLedgerList.innerHTML=r.items.length?r.items.slice(0,20).map(x=>`${x.at}<br>${x.reason}: ${x.delta>=0?'+':''}${x.delta} → ${x.balance}`).join('<hr>'):'Belum ada transaksi virtual.';
+ }catch(e){serverLedgerList.textContent='Gagal: '+e.message}
+};
+
+
+
+window.RAJA_SERVER_ADMIN_CREDIT=async(playerId,amount,adminToken)=>{
+ return await RAJA_REMOTE.call('/api/admin/add-coins',{
+  method:'POST',
+  headers:{'X-Admin-Token':adminToken},
+  body:JSON.stringify({playerId,amount})
+ });
+};
+
+
+
+window.RAJA_SECURITY_CHECK=()=>({
+ https:location.protocol==='https:'||location.hostname==='localhost',
+ noCashout:window.RAJA_WEB18_BUILD?.virtualCoinsOnly===true,
+ tokenPresent:!!localStorage.getItem('raja-slot-web18-token'),
+ online:navigator.onLine
+});
+
+
+window.RAJA_WEB18_BUILD={version:51,status:'production-gate-candidate',virtualCoinsOnly:true,serverPrimaryReady:true,production:false};
+
+
+window.RAJA_ENV={
+ apiBase:(localStorage.getItem('raja-slot-api-base')||'').replace(/\/$/,''),
+ setApiBase(v){this.apiBase=String(v||'').replace(/\/$/,'');localStorage.setItem('raja-slot-api-base',this.apiBase);RAJA_REMOTE.base=this.apiBase;},
+ get mode(){return this.apiBase?'remote':'same-origin'}
+};
+RAJA_REMOTE.base=RAJA_ENV.apiBase;
+
+
+
+document.getElementById('apiConfigBtn').onclick=()=>{apiBaseInput.value=RAJA_ENV.apiBase;apiConfigStatus.textContent='Mode: '+RAJA_ENV.mode;show('apiConfigModal')};
+document.getElementById('saveApiBaseBtn').onclick=()=>{RAJA_ENV.setApiBase(apiBaseInput.value.trim());apiConfigStatus.textContent='Mode: '+RAJA_ENV.mode;alert('Konfigurasi server disimpan.')};
+
+
+
+document.getElementById('pingServerBtn').onclick=async()=>{
+ try{const r=await RAJA_REMOTE.call('/api/health');alert('Server OK • '+(r.mode||'unknown'))}
+ catch(e){alert('Server belum terhubung: '+e.message)}
+};
+
+
+
+window.addEventListener('error',e=>{
+ try{RAJA_AUDIT('runtime-error',String(e.message||'unknown').slice(0,120));}catch(_){}
+});
+window.addEventListener('unhandledrejection',e=>{
+ try{RAJA_AUDIT('promise-error',String(e.reason?.message||e.reason||'unknown').slice(0,120));}catch(_){}
+});
+
+
+
+window.RAJA_CAN_SERVER=()=>navigator.onLine && !!window.fetch;
+const _remoteCall=RAJA_REMOTE.call.bind(RAJA_REMOTE);
+RAJA_REMOTE.call=async function(path,opts={}){
+ if(!RAJA_CAN_SERVER())throw new Error('offline');
+ return await _remoteCall(path,opts);
+};
+
+
+
+document.getElementById('downloadBackupBtn').onclick=()=>{
+ const payload={build:57,profile:JSON.parse(localStorage.getItem('raja-slot-profile')||'{}'),state,ledger:RAJA_LEDGER.list(),audit:JSON.parse(localStorage.getItem('raja-slot-web18-audit')||'[]')};
+ const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='raja-slot-backup-'+Date.now()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+};
+
+
+document.getElementById('releaseBtn').onclick=()=>show('releaseModal');
+
+window.RAJA_WEB18_BUILD={version:61,status:'public-test-gate',virtualCoinsOnly:true,serverPrimaryReady:true,production:false,requiresDeployment:true};
+</script>
+
+<div id="ageGate" class="age-gate">
+  <div class="age-card">
+    <div class="age-crown">👑</div>
+    <h2>RAJA SLOT 18+</h2>
+    <p>Hiburan dengan koin virtual. Tidak ada penarikan tunai, cash-out, atau hadiah uang nyata.</p>
+    <button id="ageAccept" class="btn primary">SAYA BERUSIA 18+</button>
+    <button id="ageExit" class="btn secondary">KELUAR</button>
+  </div>
+</div>
+
+<div id="accountModal" class="modalx">
+  <div class="modalx-card">
+    <button class="modalx-close" data-close="accountModal">✕</button>
+    <h3>👤 Akun Pemain</h3>
+    <label>Nama pemain</label>
+    <input id="playerNameInput" class="fieldx" maxlength="24" placeholder="Pemain Raja">
+    <label>ID pemain</label>
+    <input id="playerIdInput" class="fieldx" readonly>
+    <button id="saveAccountBtn" class="btn primary">SIMPAN AKUN</button>
+  </div>
+</div>
+
+<div id="topupModal" class="modalx">
+  <div class="modalx-card">
+    <button class="modalx-close" data-close="topupModal">✕</button>
+    <h3>🪙 Isi Koin Virtual</h3>
+    <p class="mutedx">Versi web ini hanya mensimulasikan pengisian koin. Belum ada transaksi uang nyata.</p>
+    <div class="coinpacks">
+      <button class="coinpack" data-coins="1000">1.000 Koin</button>
+      <button class="coinpack" data-coins="5000">5.000 Koin</button>
+      <button class="coinpack" data-coins="12000">12.000 Koin</button>
+      <button class="coinpack" data-coins="30000">30.000 Koin</button>
+    </div>
+    <div id="topupStatus" class="status">Pilih paket koin.</div><div style="margin-top:12px"><b>Riwayat Isi Koin</b><div id="topupHistory" class="mutedx" style="margin-top:6px">Belum ada pengisian.</div></div>
+  </div>
+</div>
+
+<div id="pinModal" class="modalx"><div class="modalx-card">
+<button class="modalx-close" data-close="pinModal">✕</button><h3>🔐 PIN Sesi</h3>
+<input id="pinInput" class="fieldx" inputmode="numeric" maxlength="6" placeholder="4–6 digit">
+<button id="savePinBtn" class="btn primary">SIMPAN PIN</button>
+</div></div><div id="adminModal" class="modalx"><div class="modalx-card">
+<button class="modalx-close" data-close="adminModal">✕</button>
+<h3>🛠️ Admin Demo</h3><p class="mutedx">Panel lokal untuk menguji pengelolaan koin virtual. Tidak terhubung server.</p>
+<input id="adminAddCoins" class="fieldx" inputmode="numeric" placeholder="Jumlah koin virtual">
+<button id="adminAddBtn" class="btn primary">TAMBAH KOIN DEMO</button>
+<div id="adminLog" class="status">Belum ada tindakan.</div>
+</div></div><div id="loginModal" class="modalx"><div class="modalx-card">
+<button class="modalx-close" data-close="loginModal">✕</button>
+<h3>🔑 Login Pemain</h3>
+<input id="loginName" class="fieldx" maxlength="24" placeholder="Nama pemain">
+<input id="loginPass" class="fieldx" type="password" maxlength="32" placeholder="PIN/password lokal">
+<button id="loginDoBtn" class="btn primary">LOGIN DEMO</button>
+<div id="loginStatus" class="status">Belum login.</div>
+</div></div><div id="adminDashModal" class="modalx"><div class="modalx-card">
+<button class="modalx-close" data-close="adminDashModal">✕</button>
+<h3>📊 Admin Dashboard Demo</h3>
+<div class="status">Pemain lokal: <b id="dashPlayer">-</b></div>
+<div class="status">Saldo virtual: <b id="dashCoins">0</b></div>
+<div class="status">Ledger: <b id="dashLedger">0</b> entri</div>
+<button id="dashRefresh" class="btn primary">REFRESH</button>
+</div></div><div id="serverAuthModal" class="modalx"><div class="modalx-card">
+<button class="modalx-close" data-close="serverAuthModal">✕</button>
+<h3>🌐 Akun Server</h3>
+<input id="serverName" class="fieldx" maxlength="24" placeholder="Nama pemain">
+<input id="serverId" class="fieldx" maxlength="20" placeholder="ID pemain untuk login">
+<input id="serverPass" class="fieldx" type="password" maxlength="64" placeholder="Password minimal 6 karakter">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<button id="serverRegisterBtn" class="btn primary">DAFTAR</button>
+<button id="serverLoginBtn" class="btn secondary">LOGIN</button>
+</div>
+<div id="serverAuthStatus" class="status">Belum terhubung server.</div>
+</div></div><div id="serverLedgerModal" class="modalx"><div class="modalx-card">
+<button class="modalx-close" data-close="serverLedgerModal">✕</button>
+<h3>📒 Ledger Server</h3><div id="serverLedgerList" class="status">Belum dimuat.</div>
+<button id="loadServerLedgerBtn" class="btn primary">MUAT LEDGER</button>
+</div></div><div id="apiConfigModal" class="modalx"><div class="modalx-card">
+<button class="modalx-close" data-close="apiConfigModal">✕</button>
+<h3>⚙️ Konfigurasi Server</h3>
+<p class="mutedx">Kosongkan untuk memakai server pada domain yang sama.</p>
+<input id="apiBaseInput" class="fieldx" placeholder="https://domain-server.example">
+<button id="saveApiBaseBtn" class="btn primary">SIMPAN SERVER</button>
+<div id="apiConfigStatus" class="status">Mode: same-origin</div>
+</div></div><div id="releaseModal" class="modalx"><div class="modalx-card">
+<button class="modalx-close" data-close="releaseModal">✕</button>
+<h3>✅ Checklist Rilis</h3>
+<div id="releaseChecklist" class="status" style="text-align:left;line-height:1.7">
+□ HTTPS aktif<br>□ Database produksi<br>□ Secret admin aman<br>□ Backup<br>□ Monitoring<br>□ Uji dua perangkat<br>□ Cash-out nonaktif
+</div>
+</div></div></body>
+</html>
